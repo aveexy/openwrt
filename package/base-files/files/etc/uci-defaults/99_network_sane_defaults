@@ -1,0 +1,15 @@
+#!/bin/sh
+
+uci batch <<EOF
+set dhcp.lan.leasetime='1m'
+delete dhcp.lan.dhcpv6
+delete dhcp.lan.ra
+delete dhcp.lan.ra_slaac
+delete dhcp.lan.ra_flags
+set network.lan.proto='dhcp'
+delete network.lan.ipaddr='192.168.1.1'
+delete network.lan.netmask='255.255.255.0'
+delete network.lan.ip6assign='60'
+commit dhcp
+commit network
+EOF
