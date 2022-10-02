@@ -79,6 +79,10 @@ ziking,cpe46b|\
 zyxel,nbg6616)
 	ubootenv_add_uci_config "/dev/mtd1" "0x0" "0x10000" "0x10000"
 	;;
+extreme-networks,ws-ap3805i)
+    ubootenv_add_uci_config "/dev/mtd2" "0x0" "0x10000" "0x40000"
+    ubootenv_add_uci_config "/dev/mtd3" "0x0" "0x10000" "0x40000"
+    ;;
 buffalo,wzr-hp-ag300h)
 	ubootenv_add_uci_config "/dev/mtd3" "0x0" "0x10000" "0x10000"
 	;;
